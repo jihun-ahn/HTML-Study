@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력 양식</title>
+</head>
+<body>
+    <form action="#" method="get">
+        아이디 : <input type="text" name="userid" required value="coke" disabled maxlength="10" minlength="4"><br>
+        비밀번호 : <input type="password" name="userpwd" required placeholder="비밀번호를 입력하세요."><br>
+        성별 : <input type="radio" name="gender" value="male" required checked> 남        <!--radio : 하나만 선택--> 
+               <input type="radio" name="gender" value="female" required> 여<br>
+        알레르기 : 
+        <input type="checkbox" name="allergy" value="flower">꽃가루 
+        <input type="checkbox" name="allergy" value="peach">복숭아 
+        <input type="checkbox" name="allergy" value="cucumber">오이
+        <input type="checkbox" name="allergy" value="pineapple">파인애플 <br>
+
+        <input type="hidden" name="hidden1" value="pepsi">
+        하고싶은말
+        <textarea name="content" cols="30" rows="10"></textarea>
+        <input type="submit" value="로그인">
+        <input type="reset" value="다시 작성">
+        <input type="button" value="누르지마세요" onclick="alert('누르지 말라니까')">
+
+        <button type="submit"> 로그인2 </button>
+        <button type="reset">다시 작성2</button>
+        <button type="button" onclick="alert('누르지마')">누르지마세요.</button>
+    </form>
+</body>
+</html>
+
+
+<!-- ~type 입력할 타입
+    text, password, radio, checkbox, submit, reset, button ~~
+
+    ~ name : 입력한 데이터를 담을 변수명
+   
+    ~ value : 변수에 담길 데이터
+    ~ required : 빈칸이면 경고표시
+
+    ~ placeholder : 입력 예시를 보여주는 문자열
+
+    ~ maxlength : 입력 값의 최대 길이
+    ~ minlength : 입력 값의 최소 길이
+
+    ~ disabled : 입력 불가
+-->
