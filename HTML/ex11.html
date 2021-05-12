@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 예제</title>
+</head>
+<body>
+    <h2>테이블 예제</h2>
+    <table border="1px"><!--1. 테이블 선언-->
+        <!--2. 행의 갯수-->
+        <!--3. 각 행의 컬럼(데이터)의 갯수-->
+        <caption><strong>학생 성적표</strong></caption><!--테이블의 이름-->
+        <tr>
+            <th></th>
+            <th>학생 이름</th>
+            <th>자바 점수</th>
+            <th>오라클 점수</th>
+            <th colspan="2">HTML 점수</th>
+            <!-- colspan - 가로 병합 -->
+        </tr>
+        <tr>
+            <th>1번 학생</th>
+            <td >고길동</td>
+            <td>85</td>
+            <td colspan="3">67</td>
+        </tr>
+        <tr>
+            <th>2번 학생</th>
+            <td>희동이</td>
+            <td>25</td>
+            <td>15</td>
+            <td>30</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <th>3번 학생</th>
+            <td>철수</td>
+            <td>95</td>
+            <td>57</td>
+        </tr>
+        <tr>
+            <th>4번 학생</th>
+            <td>영희</td>
+            <td>67</td>
+            <td>98</td>
+        </tr>
+    </table>
+</body>
+</html>
