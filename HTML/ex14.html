@@ -7,20 +7,63 @@
     <title>입력 양식</title>
 </head>
 <body>
-    <form action="#" method="get">
-        아이디 : <input type="text" name="userid" required value="coke" disabled maxlength="10" minlength="4"><br>
-        비밀번호 : <input type="password" name="userpwd" required placeholder="비밀번호를 입력하세요."><br>
-        성별 : <input type="radio" name="gender" value="male" required checked> 남        <!--radio : 하나만 선택--> 
-               <input type="radio" name="gender" value="female" required> 여<br>
-        알레르기 : 
-        <input type="checkbox" name="allergy" value="flower">꽃가루 
-        <input type="checkbox" name="allergy" value="peach">복숭아 
-        <input type="checkbox" name="allergy" value="cucumber">오이
-        <input type="checkbox" name="allergy" value="pineapple">파인애플 <br>
-
+    <form action="#" method="get" enctype="multipart/form-data">
+        <fieldset>
+            <legend>로그인</legend>
+            <label for="userid">아이디: </label>
+            <input type="text" name="userid" id="userid" class="user" required value="coke" disabled maxlength="10" minlength="4"><br>
+            <label for="userpwd">비밀번호: </label>
+            <input type="password" name="userpwd" id="userpwd" class="user" required placeholder="비밀번호를 입력하세요."><br>
+        </fieldset>
+        <fieldset>
+            <legend>선택 요소</legend>
+            성별 : <input type="radio" name="gender" value="male" required checked> 남        <!--radio : 하나만 선택--> 
+                <input type="radio" name="gender" value="female" required> 여<br>
+            알레르기 : 
+            <input type="checkbox" name="allergy" value="flower">꽃가루 
+            <input type="checkbox" name="allergy" value="peach">복숭아 
+            <input type="checkbox" name="allergy" value="cucumber" checked>오이
+            <input type="checkbox" name="allergy" value="pineapple">파인애플 <br>
+        </fieldset>
         <input type="hidden" name="hidden1" value="pepsi">
-        하고싶은말
-        <textarea name="content" cols="30" rows="10"></textarea>
+
+        <fieldset>
+            <legend>input이 아닌 태그</legend>
+            하고싶은말
+            <textarea name="content" cols="30" rows="10" wrap="hard">밸류 위치</textarea><br>
+        
+            좋아하는 게임 1개
+            <select name="favorgame" multiple size="5">
+                <option value="lol">롤</option>
+                <option value="over">오버워치</option>
+                <option value="bg" selected>배틀그라운드</option>
+                <option value="star">스타크래프트</option>
+                <option value="ly">라이자의 아틀리에</option>
+                <option value="duty">콜오브듀티</option>
+            </select>
+            <br>
+
+            <input type="file" name="selfie" accept="video/*"><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>기타 입력 요소</legend>
+            <label for="usernum">신발 사이즈</label>
+            <input type="number" name="usernum" id="usernum" max="360" min="130" step="5">
+            <label for="userheight">키</label>
+            <input type="number" name="userheight" id="userheight" max="360" min="30" step="0.1">
+            <label for="star">별점</label>
+            <input type="range" name="star" id="star" min="0" max="10" step="1">
+            <label for="color">색상</label>
+            <input type="color" name="color" id="color" >
+            <label for="userdate">날짜</label>
+            <input type="date" name="userdate" id="userdate">
+            <label for="userdatetime">날짜 시간</label>
+            <input type="time" name="userdatetime" id="userdatetime">
+        </fieldset>
+
+
+
         <input type="submit" value="로그인">
         <input type="reset" value="다시 작성">
         <input type="button" value="누르지마세요" onclick="alert('누르지 말라니까')">
@@ -33,7 +76,13 @@
 </html>
 
 
-<!-- ~type 입력할 타입
+<!-- 
+    입력요소
+        -input, button, textarea, select~option
+    입력요소가 아닌것
+        -fleidset
+    
+    ~type 입력할 타입
     text, password, radio, checkbox, submit, reset, button ~~
 
     ~ name : 입력한 데이터를 담을 변수명
@@ -47,4 +96,6 @@
     ~ minlength : 입력 값의 최소 길이
 
     ~ disabled : 입력 불가
+
+
 -->
