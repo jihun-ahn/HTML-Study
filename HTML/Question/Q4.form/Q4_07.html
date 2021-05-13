@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4_07</title>
+    <style>
+        .notice{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="GET">
+        <fieldset>
+            <legend>기본 정보</legend>
+            <p class="notice">기본 정보의 내용은 모두 필수 입력사항</p>
+            <label for="userid">ID</label>
+            <input type="text" name="userid" id="userid" placeholder="아이디를 입력하세요" required><br>
+            <label for="userpwd">비밀번호</label>
+            <input type="password" name="userpwd" id="userpwd" placeholder="비밀번호를 입력하세요" required><br>
+            <p class="notice">비밀번호는 최소 5자리 이상 15자리 이하로 작성해야함</p><br>
+
+            <label for="userpwdcheck">비밀번호 확인</label>
+            <input type="password" name="userpwdcheck" id="userpwdcheck" placeholder="다시 비밀번호를 입력하세요" required><br>
+            <label for="useremail">이메일</label>
+            <input type="email" name="useremail" id="useremail" placeholder="이메일 주소를 입력하세요"><br>
+            <label for="usernum">전화 번호</label>
+            <input type="number" name="usernum" id="usernum" placeholder="전화번호를 입력하세요" required><br>
+            남성 <input type="radio" name="gender" value="male">
+            여성 <input type="radio" name="gender" value="female" checked><br>
+        </fieldset>
+        <fieldset>
+            <legend>기타 정보</legend>
+            <label for="userage">나이</label>
+            <input type="number" name="userage" id="userage" required maxlength="120" minlength="1"><br>
+            <p class="notice">--나이는 1부터 120까지만 입력가능</p><br>
+            <p>취미</p>
+            <input type="checkbox" name="userhobby" value="탁구" checked>탁구
+            <input type="checkbox" name="userhobby" value="농구">농구
+            <input type="checkbox" name="userhobby" value="축구">축구<br>
+            <input type="checkbox" name="userhobby" value="독서">독서
+            <input type="checkbox" name="userhobby" value="뜨개질">뜨개질
+            <input type="checkbox" name="userhobby" value="십자수">십자수<br>
+
+            직업<select name="userjob">
+                <option value="developer">개발자</option>
+                <option value="student">학생</option>
+                <option value="teacher">선생</option>
+                <option value="engineer">엔지니어</option>
+                <option value="artist">예술가</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>자기 소개</legend>
+            <textarea name="introduce" cols="30" rows="5" wrap="hard"></textarea>
+            <p class="notice">텍스트 영역의 크기는 cols=30, rows=5</p>
+        </fieldset>
+        <input type="submit" value="회원 가입">
+        <input type="reset" value="다시 작성">
+    </form>
+</body>
+</html>
