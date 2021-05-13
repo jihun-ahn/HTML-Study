@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="../css/ex05.css">
+    <style>
+        p{
+            color: tomato;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS 적용 우선 순위</h2>
+    <!--
+        1 > 2 > 3 > 4
+        1. 인라인 stylesheet
+        2. 내부 stylesheet
+        3. 외부 stylesheet
+        4. 브라우저 기본 stylesheet
+    -->
+
+    <p style="color: purple;background-color: lightblue;">안녕하세요.</p>
+</body>
+</html>
