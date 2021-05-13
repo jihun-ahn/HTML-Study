@@ -1,0 +1,10 @@
+p:nth-child(3n+1){
+    color: red;
+    background-color: yellow;
+}
+[required]{
+    height: 50px;
+}
+[name="bb"]{
+    background-color: blue;
+}

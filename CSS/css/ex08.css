@@ -1,0 +1,26 @@
+main p{
+    color: red;
+}
+a:active{
+    color: yellowgreen;
+    text-decoration: overline;
+}
+a:focus{
+    text-decoration: overline;
+}
+a:link{/* 방문한 적이 없는 링크 */
+    color: blue;
+    font-weight: bolder;
+}
+a:visited{/* 방문한 적이 있는 링크 */
+    color: red;
+    font-size: 60px
+}
+a:hover{/* 마우스 커서가 올라갔을 때 */
+    color: blueviolet;
+    font-size: 70px;
+    text-decoration: none;
+}
+div:nth-child(2n+1){
+    color:blueviolet;
+}

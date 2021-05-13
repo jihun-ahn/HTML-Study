@@ -1,0 +1,26 @@
+*{/* 전체 선택자 */
+    color: blue;
+    background-color: beige;
+}
+
+h2{/* 태그 선택자 */
+    color: red;
+    background-color: yellow;
+}
+span, strong, b{
+    font-size: xx-large;
+}
+.myFavoriteMovie{/* 클래스 선택자 */
+    color: whitesmoke;
+    background-color: midnightblue;    
+}
+.myTitle{
+    color: plum;
+    border-style: solid;
+    border-width: 5px;
+    border-color: palegreen;
+}
+#myBestKorMovie{/* 아이디 선택자(아이디는 고유하게 사용해야함) */
+    color: brown;
+    background-color: cornflowerblue;
+}
