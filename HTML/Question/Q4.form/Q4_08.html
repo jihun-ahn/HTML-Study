@@ -8,30 +8,74 @@
 </head>
 <body>
     <form action="#" method="GET">
-    <table>
+    <table border="1">
         <caption>표 테이블</caption>
         <tr>
             <th colspan="4">기본 정보</th>
         </tr>
         <tr>
-            <tl><label for="userid">ID</label></tl>
-            <tl><input type="text" name="userid" id="userid" placeholder="아이디를 입력하세요" required></tl>
-            <tl><label for="userpwd">비밀번호</label></tl>
-            <tl><input type="password" name="userpwd" id="userpwd" placeholder="비밀번호를 입력하세요" required></tl>
+            <td><label for="userid">ID</label></td>
+            <td><input type="text" name="userid" id="userid" placeholder="아이디를 입력하세요" required></td>
+            <td><label for="userpwd">비밀번호</label></td>
+            <td><input type="password" name="userpwd" id="userpwd" placeholder="비밀번호를 입력하세요" required></td>
         </tr>
         <tr>
-            <tl><label for="username">이름</label></tl>
-            <tl><input type="text" name="username" id="username" placeholder="이름을 입력하세요" required></tl>
-            <tl><label for="userpwdcheck">확인 비밀번호</label></tl>
-            <tl><input type="password" name="userpwdcheck" id="userpwdcheck" placeholder="다시 비밀번호를 입력하세요" required></tl>
+            <td><label for="username">이름</label></td>
+            <td><input type="text" name="username" id="username" placeholder="이름을 입력하세요" required></td>
+            <td><label for="userpwdcheck">확인 비밀번호</label></td>
+            <td><input type="password" name="userpwdcheck" id="userpwdcheck" placeholder="다시 비밀번호를 입력하세요" required></td>
         </tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
-        <tr></tr>
+        <tr>
+            <td><label for="useremail">이메일</label></td>
+            <td><input type="email" name="useremail" id="useremail" placeholder="이메일 주소를 입력하세요" required></td>
+            <td><label for="usernum">전화번호</label></td>
+            <td><input type="number" name="usernum" id="usernum" placeholder="전화번호를 입력하세요" required></td>
+        </tr>
+        <tr>
+            <th colspan="4">기타정보</th>
+        </tr>
+        <tr>
+            <td><label for="userage">나이</label></td>
+            <td><input type="number" name="userage" id="userage" required></td>
+            <td><label for="usergender">성별</label></td>
+            <td>
+                <input type="radio" name="gender" value="male">남성
+            <input type="radio" name="gender" value="female" checked>여성
+        </td>
+        </tr>
+        <tr>
+            <td rowspan="2"><label for="userhobby">취미</label></td>
+            <td colspan="4">
+                <input type="checkbox" name="userhobby" value="탁구" checked>탁구
+                <input type="checkbox" name="userhobby" value="농구">농구
+                <input type="checkbox" name="userhobby" value="축구">축구
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <input type="checkbox" name="userhobby" value="독서">독서
+                <input type="checkbox" name="userhobby" value="뜨개질">뜨개질
+                <input type="checkbox" name="userhobby" value="십자수">십자수
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">직업<select name="userjob">
+                <option value="developer">개발자</option>
+                <option value="student">학생</option>
+                <option value="teacher">선생</option>
+                <option value="engineer">엔지니어</option>
+                <option value="artist">예술가</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <textarea name="userintro" id="userintro" cols="70" rows="5" placeholder="자기 소개를 입력하세요"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="회원 가입"></td>
+            <td colspan="2"><input type="reset" value="다시 작성"></td>
+        </tr>
     </table>
 </form>
 </body>
