@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1_04</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Atma:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+        html{
+            font-family: 'Do Hyeon', sans-serif;
+        }
+        h1{
+            font-family: 'Atma', cursive;
+            text-align: center;
+        }
+        span{
+            color: blue;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        ol{
+            list-style-type: upper-roman;
+            
+        }
+        li p{
+            line-height: 0px;
+        }
+        ul{
+            list-style-type: square;
+        }
+        ul>li{
+            width: 100px;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        table *{
+            border: 1px black solid;
+        }
+        th{
+            text-align: center;
+            border-right: 1px white solid;
+            color: white;
+            background-color: black;
+        }
+        th:last-child{
+            border-right: 1px black solid;
+        }
+        .html{
+            color: purple;
+            background-color: plum;
+        }
+        .css{
+            color: rgb(255, 60, 0);
+            background-color: rgb(244, 150, 96);
+        }
+        .javascript{
+            color: turquoise;
+            background-color: rgb(37, 120, 141);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>myHomePage</h1>
+    <img src="./img/github.png" alt="github" width="100px" height="100px">
+    <p>개발자를 꿈꾸며 열심히 공부하는 <span>홍길동</span>입니다.</p>
+    <ol>
+        <li><p>현재 학습하는 과목</p>
+            <ul>
+                <li class="html">HTML</li>
+                <li class="css">CSS</li>
+                <li class="javascript">Javascript</li>
+            </ul>
+        </li>
+        <li><p>이번 학기 시간표</p>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>월요일</th>
+                    <th>화요일</th>
+                    <th>수요일</th>
+                    <th>목요일</th>
+                </tr>
+                <tr>
+                    <td>1교시</td>
+                    <td class="html" colspan="2">HTML</td>
+                    <td>공강</td>
+                    <td class="javascript" rowspan="2">Javascript</td>
+                </tr>
+                <tr>
+                    <td>2교시</td>
+                    <td>공강</td>
+                    <td class="css" colspan="2">CSS</td>
+                </tr>
+            </table>
+        </li>
+    </ol>
+</body>
+</html>

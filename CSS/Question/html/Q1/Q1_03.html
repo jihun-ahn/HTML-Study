@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1_03</title>
+    <style>
+        table *{
+            border: 1px black dotted;
+            text-align: center;
+        }
+        tr :last-child{
+            width: 500px;
+        }
+        tr :first-child{
+            width: 200px;
+        }
+        tr *:nth-of-type(2n){
+            background-color: yellow;
+        }
+        
+        tr *:nth-of-type(2n+1){
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>이메일</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>김철수</td>
+                <td>chul@google.com</td>
+            </tr>
+            <tr>
+                <td>김영희</td>
+                <td>young@google.com</td>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>hong@google.com</td>
+            </tr>
+            <tr>
+                <td>김수진</td>
+                <td>sujin@google.com</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
