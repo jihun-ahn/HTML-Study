@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        .mainframe{
+            position: relative;
+            left: 200px;
+            top: 200px;
+            background-color: rgb(66, 66, 66);
+            width: 950px;
+            height: 530px;
+        }
+        ul{
+            list-style-type: none;
+                        
+        }
+        li{
+            position: relative;
+            float: left;
+            top: 30px;
+            width: 160px;
+            height: 250px;
+        }
+        img{
+            float: left;
+            width: 150px;
+            height: 180px;
+            z-index: 1;
+        }
+        .text{
+            position: relative;
+            float: left;
+            width: 150px;
+            height: 30px;
+            font-size: 15px;
+            padding:5px 5px 5px 5px;
+            background-color: black;
+            color: white;
+            bottom: 40px;           
+        }
+        strong{
+            color: red;
+        }
+        .rank{
+            position: relative;
+            float: left;
+            font-size: 30px;
+            font-weight: bold;
+            font-style: italic;
+            color: white;
+            z-index: 5;
+            bottom: 185px;
+            
+        }
+        .grade::after{
+            position: relative;
+            float: right;
+            content: "🔞";
+            padding: 10px 15px 0 0;
+            z-index: 5;
+            bottom: 185px;            
+        }
+        strong{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainframe">
+        <ul class="movie">
+            <li>
+                <img src="img/1.jpg" alt="1">
+                <span class="rank">1</span>
+                <span class="grade"></span>
+                <p class="text">예매율&nbsp;<strong>12.8%</strong></p>
+            </li>
+            <li>
+                <img src="./img/2.jpg" alt="2">
+                <span class="rank">2</span>
+                <span class="grade"></span>
+                <p class="text">예매율&nbsp;<strong>10.41%</strong></p>
+            </li>
+            <li>
+                <img src="./img/3.jpg" alt="3">
+                <span class="rank">3</span>
+                <span class="grade"></span>
+                <p class="text">예매율&nbsp;<strong>10.14%</strong></p>
+            </li>
+            <li>
+                <img src="./img/4.jpg" alt="4">
+                <span class="rank">4</span>
+                <span class="grade"></span>
+                <p class="text">예매율&nbsp;<strong>7.84%</strong></p>
+            </li>
+            <li>
+                <img src="./img/5.jpg" alt="5">
+                <span class="rank">5</span>
+                <span class="grade"></span>
+                <p class="text">예매율&nbsp;<strong>7.31%</strong></p>
+            </li>
+            <li>
+                <img src="./img/6.jpg" alt="6">
+                <span class="rank">6</span>
+                <span class="grade"></span>
+                <p class="text">예매율&nbsp;<strong>5.01%</strong></p>
+            </li>
+            <li>
+                <img src="./img/7.jpg" alt="7">
+                <span class="rank">7</span>
+                <span class="grade"></span>
+                <p class="text">예매율&nbsp;<strong>3.99%</strong></p>
+            </li>
+            <li>
+                <img src="./img/8.jpg" alt="8">
+                <span class="rank">8</span>
+                <span class="grade"></span>
+                <p class="text">예매율&nbsp;<strong>3.91%</strong></p>
+            </li>
+            <li>
+                <img src="./img/9.jpg" alt="9">
+                <span class="rank">9</span>
+                <span class="grade"></span>
+                <p class="text">예매율&nbsp;<strong>3.88%</strong></p>
+            </li>
+            <li>
+                <img src="./img/10.jpg" alt="10">
+                <span class="rank">10</span>
+                <span class="grade"></span>
+                <p class="text">예매율&nbsp;<strong>3.43%</strong></p>
+            </li>
+        </div>
+    </div>
+</body>
+</html>

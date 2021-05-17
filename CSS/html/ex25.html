@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        .grandparent{
+            width: 400px;
+            height: 5000px;
+            margin: 0 auto;
+            background-color: aquamarine;
+            position: relative;
+        }
+        .parent{
+
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: grey;
+        }
+        .child{
+            width: 200px;
+            height: 200px;
+            color: black;
+            font-size: 30px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 200px;
+
+        }
+        .orange{
+            background-color: orange;
+            position: fixed;
+            
+            top: 100px;
+            left: 100px;
+        }
+        .yellow{
+            background-color: yellow;
+            position: relative;
+            bottom: 50px;
+            right: 50px;
+            z-index: 5;
+        }
+        .green{
+            background-color: green;
+            bottom: 50px;
+            right: 50px;
+            z-index: 2;
+        }
+        .other{
+            background-color: black;
+            color: white;
+            font-size: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="grandparent">
+        <div class="parent">
+            <div class="child orange">
+                Child BOX
+            </div>
+            <div class="child yellow">
+                ChildBox
+            </div>
+            <div class="child green">
+                ChildBox
+            </div>
+        </div>
+    </div>
+</body>
+</html>

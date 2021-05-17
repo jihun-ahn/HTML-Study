@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 순위</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        .parent{
+            margin: 0 auto;
+            position: relative;
+            top: 10px;
+            width: 1000px;
+            height: 600px;
+            background-color: rgb(34, 33, 33);
+        }
+        .child{
+            width: 160px;
+            height: 250px;
+            margin-left: 27px;
+            background-color: gainsboro;
+            display: inline-block;
+        }
+        .top{
+            position: relative;
+            top: 30px;
+        }
+        .top::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .bottom{
+            position: relative;
+            top: 60px;
+        }
+        .post{
+            height: 210px;
+        }
+        .ticek{
+            height: 40px;
+            background-color: black;
+            position: relative;
+            line-height: 40px;
+            color: white;
+        }
+        ul li{
+            display: inline;
+        }
+        li.left{
+            position: relative;
+            left: 5px;
+        }
+        li.right{
+            position: relative;
+            right: 5px;
+            float: right;
+            color: rgb(221, 54, 54);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="top">
+            <div class="child rank1">
+                <div class="post">
+                    <img src="../img/rank1.jpg" alt="분노의 질주">
+                </div>
+                <div class="ticek">
+                    <ul>
+                        <li class="left">예매율</li>
+                        <li class="right">12.80%</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="child rank2">
+                <div class="post">
+                    <img src="../img/rank2.jpg" alt="크루즈패밀리">
+                </div>
+                <div class="ticek">
+                    <ul>
+                        <li class="left">예매율</li>
+                        <li class="right">10.41%</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="child rank3">
+                <div class="post">
+                    <img src="../img/rank3.jpg" alt="스파이럴">
+                </div>
+                <div class="ticek">
+                    <ul>
+                        <li class="left">예매율</li>
+                        <li class="right">10.14%</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="child rank4">
+                <div class="post">
+                    <img src="../img/rank4.jpg" alt="더 스파이">
+                </div>
+                <div class="ticek">
+                    <ul>
+                        <li class="left">예매율</li>
+                        <li class="right">7.84%</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="child rank5">
+                <div class="post">
+                    <img src="../img/rank5.jpg" alt="귀멸의 칼날">
+                </div>
+                <div class="ticek">
+                    <ul>
+                        <li class="left">예매율</li>
+                        <li class="right">7.31%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="child rank6">
+                <div class="post">
+                    <img src="../img/rank6.jpg" alt="비당이">
+                </div>
+                <div class="ticek">
+                    <ul>
+                        <li class="left">예매율</li>
+                        <li class="right">5.01%</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="child rank7">
+                <div class="post">
+                    <img src="../img/rank7.jpg" alt="키퍼스">
+                </div>
+                <div class="ticek">
+                    <ul>
+                        <li class="left">예매율</li>
+                        <li class="right">3.99%</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="child rank8">
+                <div class="post">
+                    <img src="../img/rank8.jpg" alt="링">
+                </div>
+                <div class="ticek">
+                    <ul>
+                        <li class="left">예매율</li>
+                        <li class="right">3.91%</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="child rank9">
+                <div class="post">
+                    <img src="../img/rank9.jpg" alt="미스">
+                </div>
+                <div class="ticek">
+                    <ul>
+                        <li class="left">예매율</li>
+                        <li class="right">3.88%</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="child rank10">
+                <div class="post">
+                    <img src="../img/rank10.jpg" alt="버커밍">
+                </div>
+                <div class="ticek">
+                    <ul>
+                        <li class="left">예매율</li>
+                        <li class="right">3.43%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
