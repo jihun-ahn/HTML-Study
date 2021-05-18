@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        body{
+            width: 100%;
+        }
+        .topframe{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-image: url(./img/family.png);
+            background-repeat: no-repeat;
+            background-position:center;
+            border-top: 1px rgba(128, 128, 128, 0.178) solid;
+            border-bottom: 1px rgba(128, 128, 128, 0.178) solid;
+        }
+        img{
+            margin: 0;
+        }
+        .ad{
+            width: 640px;
+            height: 90px;
+            border: 1px rgba(128, 128, 128, 0.178) solid;
+        }
+        .noticetitle{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        dl{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 680px;
+            height: 75px;
+            padding-right: 370px;
+            margin: 0;
+        }
+        .#{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 100px;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 600px;
+        }
+        [id=search]{
+            width: 628px;
+            height: 34px;
+            margin-right: 0;
+        }
+        [type=image]{
+            margin:0 300px 0 0;
+        }
+        form{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="topframe">
+        <img src="./img/logo.png" alt="weathernews" width="120">
+        <img src="./img/top_button.png" alt="top_button">
+    </div>
+    <div class="ad">
+        광고
+    </div>
+    <div class="noticetitle">
+        <dl>
+            <div class="# 1">
+            <dt>특보</dt>
+            <dd class="content 1">풍랑주의보 해제</dd>
+            </div>
+            <div class="# 2">
+            <dt>이슈</dt>
+            <dd class="content 3">코로나19 확진자 수 업데이트</dd>
+            </div>
+            <div class="# 3">
+            <dt>운세</dt>
+            <dd class="content 3">오늘의 타로/별자리/띠별 운세 확인...</dd>
+            </div>
+        </dl>
+    </div>
+    <div class="search">
+        <form action="#" method="GET">
+            <input type="text" name="search" id="search" placeholder="도시 및 테마 검색 (예) 서울, 잠실야구장">
+            <input type="image" src="./img/search_button.png" alt="search_button" width="34px" height="34px">
+        </form>
+    </div>
+</body>
+</html>
