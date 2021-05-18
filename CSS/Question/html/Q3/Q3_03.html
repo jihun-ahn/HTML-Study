@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+        }
+        .mainframe{
+            width: 800px;
+            height: 400px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-around;
+        }
+        strong{
+            color: springgreen;
+        }
+        ul{
+            list-style-type: none;
+
+        }
+        li>ul{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: left;
+        }
+        .sub{
+            padding-left: 10px;
+            width: 250px;
+            height: 400px;
+            margin:0;
+    
+        }
+        h4+ul>li{
+            width: 300px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: left;
+        }
+        p{  
+            height: 20px;
+            width: 120px;
+            margin-right: 0;
+        }
+        a{
+            width: 83px;
+            color: black;
+        }
+        .title{
+            font-size: 13px;
+            font-weight: bold;
+            width: 150px;
+            height: 30px;
+        }
+        .name{
+            font-size: 10px;
+            color: grey;
+        }
+        .summary{
+            font-size: 12px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>베스트 도전&도전 <strong>추천웹툰</strong></h2><hr>
+    <ul class="mainframe">
+        <li class="sub">
+            <h4>에피소드</h4>
+            <ul>
+                <li>
+                    <a href="https://comic.naver.com/bestChallenge/list.nhn?titleId=723990">
+                        <img src="https://shared-comic.pstatic.net/thumb/nas/user_contents_data/challenge_comic/2020/06/25/puraria_/thumbnail_83x90caaecce6_15e3_4d6a_8d2d_4bd97596a940_00000757.JPEG" alt="이불밖달리기">
+                    </a>
+                    <div class="text">
+                        <p class="title">이불 밖 달리기</p>
+                        <a href="https://comic.naver.com/artistTitle.nhn?artistId=323434">
+                        <p class="name">puraria_</p>
+                        </a>
+                        <p class="summary">저질체력인생과 운동</p>
+                    <!--평점-->    
+                    </div>
+                </li>
+                <li>
+                    <a href="https://comic.naver.com/bestChallenge/list.nhn?titleId=740809">
+                    <img src="https://shared-comic.pstatic.net/thumb/nas/user_contents_data/challenge_comic/2020/06/03/synam87/thumbnail_83x901c53dfd9_e7cc_4ff7_bbe5_ceaaba1280ed_00001646.JPEG" alt="이불밖달리기">
+                    </a>
+                    <div class="text">
+                    <p class="title">양송부부의 맛있는 한잔</p>
+                    <a href="https://comic.naver.com/artistTitle.nhn?artistId=308985">
+                    <p class="name">synam87</p>
+                    </a>
+                    <p class="summary">술이 있는 일상</p> 
+                    <!--평점-->
+                    </div>
+                </li>
+                <li>
+                    <a href="https://comic.naver.com/challenge/list.nhn?titleId=770776">
+                    <img src="https://shared-comic.pstatic.net/thumb/nas/user_contents_data/challenge_comic/2021/04/25/kte0621/thumbnail_83x900d4683bb_7632_41d0_95f5_ea62681ba567_00001398.JPEG" alt="이불밖달리기">
+                    </a>
+                    <div class="text"></div>
+                    <p class="title">콩닥콩닥어린이집</p>                    
+                    <a href="https://comic.naver.com/artistTitle.nhn?artistId=345187">
+                    <p class="name">kte0621</p>
+                    </a>
+                    <p class="summary">어린이집이야기♥</p> 
+                    <!--평점-->
+                    </div>
+                </li>
+            </ul>
+        </li> 
+        <li class="sub">
+            <h4>옴니버스</h4>
+            <ul>
+                <li>
+                    <a href="https://comic.naver.com/bestChallenge/list.nhn?titleId=763837">
+                    <img src="https://shared-comic.pstatic.net/thumb/nas/user_contents_data/challenge_comic/2021/01/04/psh911121/thumbnail_83x9048229edb_2345_4a1d_9348_15b22371d027_00007184.JPEG" alt="어둠의 일상툰">
+                    </a>
+                    <div class="text">
+                    <p class="title">어둠의 일상툰</p>                    
+                    <a href="https://comic.naver.com/artistTitle.nhn?artistId=252084">
+                    <p class="name">psh911121</p>
+                    </a>
+                    <p class="summary">어둠의 일상</p>    
+                    <!--평점-->
+                    </div>
+                </li>
+                <li>
+                    <a href="https://comic.naver.com/bestChallenge/list.nhn?titleId=676977">
+                    <img src="https://shared-comic.pstatic.net/thumb/nas/user_contents_data/challenge_comic/2018/03/04/kimtaehun100/thumbnail_83x908d7da879_8c57_479c_8250_9476c85220c3_00001673.JPEG" alt="봉산코믹스">
+                    </a>
+                    <div class="text">
+                    <p class="title">봉산코믹스</p>                    
+                    <a href="https://comic.naver.com/artistTitle.nhn?artistId=280244">
+                    <p class="name">kimtaehun100</p>
+                    </a>
+                    <p class="summary">비극과희극 단편선</p>    
+                    <!--평점-->
+                    </div>
+                </li>
+                <li>
+                    <a href="https://comic.naver.com/challenge/list.nhn?titleId=483237">
+                    <img src="https://shared-comic.pstatic.net/thumb/nas/user_contents_data/challenge_comic/2021/05/16/da2ginda/thumbnail_83x90d0bd834f_ab57_4772_8457_ccadc2b72505_00005199.JPEG" alt="상상동물">
+                    </a>
+                    <div class="text">
+                    <p class="title">상상동물</p>                    
+                    <a href="https://comic.naver.com/artistTitle.nhn?artistId=233067">
+                    <p class="name">da2ginda</p>
+                    </a>
+                    <p class="summary">인간은 상상하는동물</p>   
+                    <!--평점--> 
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li class="sub">
+            <h4>스토리</h4>
+            <ul>
+                <li>
+                    <a href="https://comic.naver.com/bestChallenge/list.nhn?titleId=729292">
+                    <img src="https://shared-comic.pstatic.net/thumb/nas/user_contents_data/challenge_comic/2021/01/23/oooooddddd/thumbnail_83x904847c9ad_97b8_4389_ad3b_7ec63177c5a5_00006324.JPEG" alt="파라웨이 치킨">
+                    </a>
+                    <div class="text">
+                    <p class="title">이파라웨이 치킨</p>                    
+                    <a href="https://comic.naver.com/artistTitle.nhn?artistId=301861">
+                    <p class="name">oooooddddd</p>
+                    </a>
+                    <p class="summary">먼치킨알바들과사장</p>
+                    </div> 
+                    <!--평점-->  
+                </li>
+                <li>
+                    <a href="https://comic.naver.com/bestChallenge/list.nhn?titleId=665388">
+                    <img src="https://shared-comic.pstatic.net/thumb/nas/user_contents_data/challenge_comic/2020/05/05/ptrk/thumbnail_83x90a1f3c6e1_58ce_484a_998b_ff6f7734f199_00003056.JPEG" alt="옆집에 그녀가 산다">
+                    </a>
+                    <div class="text">
+                    <p class="title">옆집에 그녀가 산다</p>                    
+                    <a href="https://comic.naver.com/artistTitle.nhn?artistId=144714">
+                    <p class="name">ptrk</p>
+                    </a>
+                    <p class="summary">옆집의 특별한그녀!</p>  
+                    </div> 
+                    <!--평점-->
+                </li>
+                <li>
+                    <a href="https://comic.naver.com/challenge/list.nhn?titleId=764448">
+                    <img src="https://shared-comic.pstatic.net/thumb/nas/user_contents_data/challenge_comic/2021/01/11/fkfk750/thumbnail_83x907a68f49f_50c2_4534_85ff_26193f072369_00001832.JPEG" alt="오늘부터 로망스">
+                    </a>
+                    <div class="text">
+                    <p class="title">오늘부터 로망스</p>                    
+                    <a href="https://comic.naver.com/artistTitle.nhn?artistId=342179">
+                    <p class="name">fkfk750</p>
+                    </a>
+                    <p class="summary">고교 로맨스 성공기</p>  
+                    </div> 
+                    <!--평점-->
+                </li>
+            </ul>
+
+        </li>
+    </ul>
+</body>
+</html>
