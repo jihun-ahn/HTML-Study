@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body{
+            background-color: rgb(239, 239, 239);
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style-type: none;
+        }
+        nav{
+            width: 100%;
+            height: 5vh;
+            background-color: #008275;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .navlist{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+
+        }
+        .navlist a{  
+            display: inline-block;
+            height: 5vh;
+            position: relative;
+            right: 100%;
+            padding: 0 10px 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 100;
+            line-height: 5vh;
+
+        }
+        .navlist a:hover{
+            background-color: rgb(0, 167, 150);
+        }
+        .search{
+            width: 20%;
+            height: 5vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            
+        }
+        .search *{
+            text-decoration: none;
+            line-height: 5vh;
+            color: black;
+            border: 1px rgb(201, 201, 201) solid;
+            background-color: white;
+        }
+        .search a{
+            width: 30px;
+            height: 5vh;       
+            text-align: center;
+        }
+        [type=text]{
+            width: 60%;
+            height: 100%;
+        }
+        [type=button]{
+            width: 30px;
+            height: 100%;
+        }
+        section{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+        .asideleft{
+            width: 15%;
+        }
+        .asideright{
+            width: auto;
+        }
+        article{
+            background-color: white;
+            border: 1px rgb(201, 201, 201) solid;
+            width: 50%;
+        }
+        .top{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        h1 *{
+            color: rgb(48, 48, 48);
+            font-size: 35px;
+        }
+        .toplist{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .toplist li{
+            border: 1px rgb(201, 201, 201) solid;
+            padding: 5px 10px 5px 10px;
+            color: black;
+        }
+        .toplist+p{
+            width: 100%; 
+            text-align: right;
+        }
+        .topad{
+            text-align: center;
+            margin: 3vh 0 3vh 0;
+        }
+        .category{
+            border:1px rgb(201, 201, 201) solid;
+            border-radius: 5px;
+            width: 95%;
+            margin: 1vh 2.5% 1vh 2.5%;
+            padding: 5px;
+            font-size: 1em;
+        }
+        .category a{
+            color: rgb(71, 112, 226);
+            text-decoration: none;
+        }
+        hr{
+            width: 95%;
+            margin: 2vh 2.5% 2vh 2.5%;
+            border-top: rgb(201, 201, 201) 0.1vh solid;
+        }
+        .summary{
+            text-align: center;
+            font-size: .8em;
+            padding: 5px;
+            margin-bottom: 2vh;
+        }
+        h2>strong{
+            color: #00a495;
+        }
+        .summary>p>a{
+            color: #008275;
+        }
+        tr{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            border-bottom: rgb(201, 201, 201) solid 1px;
+        }
+        table{
+            border: 2px #00a495 solid;
+            border-collapse: collapse;
+            width: 95%;
+            margin: 2vh 2.5% 2vh 2.5%;
+            text-align: left;
+            line-height: 1.8;
+        }
+        
+        .tableimg{
+            background-color: rgb(0, 167, 150);
+            padding: 5px 10px;
+        }
+        .tableimg>a>img{
+            width: 60px;
+            height: 60px;
+
+        }
+        .tabletext{
+            padding: 5px;
+            font-size: 1em;
+        }
+        .tabletext>p>a{
+            color: rgb(71, 112, 226);
+            text-decoration: none;
+        }
+        .project *{
+            text-align: center;
+            line-height: initial;
+            padding: 3px;
+        }
+        .project img{
+            width: 60px;
+            height: 60px;
+        }
+        .background{
+            background-color: rgb(0, 167, 150);
+            border-bottom: none;
+            color: white;
+        }
+        .background td{
+            width: 100%;
+        }
+        .background a{
+            color: white;
+        }
+        .background a:hover{
+            text-decoration: underline;
+        }
+        .background *{
+            line-height: initial;
+            padding: 3px;
+        }
+        .wikitable img{
+            width: 30px;
+            height: 30px;
+        }
+        .subtitle{
+            width: 100%;
+        }
+        .subtitle a{
+            color: ;
+            font-size: 1.2rem;
+            vertical-align: top;
+        }
+        .operation{
+            border:1px black solid;
+            border-top: 5px rgb(0, 167, 150) solid;
+            width: 95%;
+            margin: 2vh 2.5% 2vh 2.5%;
+            text-align: left;
+            line-height: 1.8;
+        }
+        .operation ul{
+            list-style-type: disc;
+            padding-left: 2%;
+        }
+        .operation hr{
+            margin: 0.5em 0;
+            width: 99%;
+            padding-left: -5%;
+            
+        }
+        .operation li{
+            padding: 5px;
+            list-style-position: inside;
+        }
+        .copyright{
+            width: 95%;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="./namu.html">
+            <img src="./img/namu.png" alt="나무위키">
+        </a>
+        <ul class="navlist">
+            <li>
+                <a href="https://namu.wiki/RecentChanges">
+                    🧭 최근 변경
+                </a>
+            </li>
+            <li>
+                <a href="https://namu.wiki/RecentDiscuss">
+                    💡 최근 토론
+                </a>
+            </li>
+            <li>
+                <a href="https://namu.wiki/RecentChanges">
+                    📦 특수 기능
+                </a>
+            </li>
+            <li>
+                <a href="https://arca.live/">
+                    📄 아카
+                </a>
+            </li>
+        </ul>
+        <div class="search">
+            <a href="https://namu.wiki/random" >✈</a>
+            <input type="text" name="searchbox" id="searchbox" placeholder="Search">
+            <input type="button" value="🔍">
+            <a href="https://namu.wiki/">➡</a>
+            <img src="./img/user.png" alt="user" style="border: none;">
+        </div>
+    </nav>
+    <section>
+        <aside class="asideleft">
+
+        </aside>
+        <article>
+            <div class="top">
+                <h1><a href="./namu.html">나무위키:대문</a></h1>
+                <ul class="toplist">
+                    <li><a href=""><span style="color: orangered;">☆</span> n</a></li>
+                    <li><a href=""> 역링크</a></li>
+                    <li><a href=""> 토론</a></li>
+                    <li><a href=""> 편집</a></li>
+                    <li><a href=""> 역사</a></li>
+                    <li><a href=""> ACL</a></li>
+                </ul>
+                <p>최근 수정 시각: YYYY-MM-DD hh:mm:ss</p>
+            </div>
+            <div class="topad">
+                <a href="./namu.html">
+                    <img src="./img/topad.png" alt="top ad" width="90%">
+                </a>
+            </div>
+
+            <div class="category">
+                <p>분류 : <a href="namu.html">text</a></p>
+            </div>
+            <hr>
+            <div class="summary">
+                <h2>여러분이 가꾸어 나가는 <strong>지식의 나무</strong></h2>
+                <p><a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4">나무위키</a>에 오신것을 환영합니다!<br><br>
+                    나무위키는 누구나 기여할 수 있는 위키입니다.<br>
+                    검증되지 않았거나 편향된 내용이 있을 수 있습니다.
+                </p>
+                <hr>
+                <table class="notice">
+                    <tbody>
+                        <tr>
+                            <td class="tableimg">
+                                <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%8F%84%EC%9B%80%EB%A7%90">
+                                    <img src="./img/namu_help.png" alt="도움말">
+                                </a>
+                            </td>
+                            <td class="tabletext">
+                                <h2>나무위키에 처음 오셨나요?</h2>
+                                <p>먼저 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EA%B8%B0%EB%B3%B8%EB%B0%A9%EC%B9%A8/%EC%9D%B4%EC%9A%A9%EC%9E%90%20%EA%B4%80%EB%A6%AC%20%EB%B0%A9%EC%B9%A8">나무위키의 규정</a>과
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%8F%84%EC%9B%80%EB%A7%90#%EC%9E%90%EC%A3%BC%20%ED%95%98%EB%8A%94%20%EC%8B%A4%EC%88%98">CCL 위반 등 자주 하는 실수</a>, 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%8F%84%EC%9B%80%EB%A7%90">도움말</a>을 확인해 보세요.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tableimg">
+                                <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EA%B2%8C%EC%8B%9C%ED%8C%90">
+                                    <img src="./img/namu_forum.png" alt="게시판">
+                                </a>
+                            </td>
+                            <td class="tabletext">
+                                <h2>나무위키 게시판</h2>
+                                <p><a href="https://board.namu.wiki/b/notice">공지 </a>· 
+                                   <a href="https://board.namu.wiki/b/free">그루터기</a> · 
+                                   <a href="https://board.namu.wiki/b/qna">문의</a> · 
+                                   <a href="https://board.namu.wiki/b/report">신고</a> · 
+                                   <a href="https://board.namu.wiki/b/editrequest">편집 요청</a> · 
+                                   <a href="https://board.namu.wiki/b/whyiblocked">차단 소명/해제 요청</a> · 
+                                   <a href="https://board.namu.wiki/b/ghost">다중 계정 검사</a> · 
+                                   <a href="https://board.namu.wiki/b/discuss">토론 문의</a> · 
+                                   <a href="https://feedback.theseed.io/">개발 문의</a>
+                                </p>
+                        </tr>
+                        <tr>
+                            <td class="tableimg">
+                                <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EA%B6%8C%EB%A6%AC%EC%B9%A8%ED%95%B4%20%EB%8F%84%EC%9B%80%EB%A7%90">
+                                    <img src="./img/namu_sup.png" alt="권리침해 문의">
+                                </a>
+                            </td>
+                            <td class="tabletext">
+                                <h2>권리침해 문의</h2>
+                                <p>권리자의 임시조치 및 저작권 침해 관련 문의 방법이 
+                                   <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EA%B6%8C%EB%A6%AC%EC%B9%A8%ED%95%B4%20%EB%8F%84%EC%9B%80%EB%A7%90"> 권리침해 도움말</a>에 설명되어 있습니다.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tableimg">
+                                <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EA%B8%B0%EB%B3%B8%EB%B0%A9%EC%B9%A8/%ED%86%A0%EB%A1%A0%20%EA%B4%80%EB%A6%AC%20%EB%B0%A9%EC%B9%A8#%ED%86%A0%EB%A1%A0%EC%9D%98%20%EC%A4%91%EC%9E%AC">
+                                    <img src="./img/namu_law.svg" alt="중재 제도">
+                                </a>
+                            </td>
+                            <td class="tabletext">
+                                <h2>중재 제도</h2>
+                                <p>토론 중재 요청을 받고 있습니다.
+                                    <a href="https://board.namu.wiki/b/discuss?category=%EC%A4%91%EC%9E%AC%EB%AC%B8%EC%9D%98">게시판</a>에서 요청하실 수 있습니다.</p>
+                                </td>
+                        </tr>
+                        <tr>
+                            <td class="tableimg">
+                                <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EC%9A%B4%EC%98%81%EC%A7%84%20%EC%A7%80%EC%9B%90">
+                                    <img src="./img/namu_admin.png" alt="운영진 지원">
+                                </a>
+                            </td>
+                            <td class="tabletext">
+                                <h2>운영진 지원</h2>
+                                <p>나무위키에서 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EA%B8%B0%EB%B3%B8%EB%B0%A9%EC%B9%A8#%EC%9A%B4%EC%98%81%EC%9E%90">운영진</a>을 상시 모집합니다. 
+                                    <a href="https://namu.wiki/discuss/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4%3A%EC%9A%B4%EC%98%81%EC%A7%84%20%EC%A7%80%EC%9B%90">이곳</a>에서 지원하실 수 있습니다.</p>
+                                </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+                <table class="project">
+                    <tbody>
+                        <tr class="background">
+                            <td colspan="2">
+                                <p style="font-size: 1.5em;font-weight: bold;">나무위키 프로젝트</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2"><img src="./img/namu_project.png" alt="나무위키 프로젝트"></td>
+                            <td>프로젝트에 참여해서 관련 문서에 기여의 손길을 보내주세요!</td>
+                        </tr>
+                        <tr>
+                            <td>최근 개설된 프로젝트가 없습니다.</td>
+                        </tr>
+                        <tr class="background">
+                            <td colspan="2">
+                                <a href="https://namu.wiki/w/%EB%B6%84%EB%A5%98:%ED%86%A0%EB%A7%89%EA%B8%80">토막글</a> · 
+                                <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%AC%B8%EC%84%9C%20%EC%9E%91%EC%84%B1%20%EC%9A%94%EC%B2%AD">문서 작성 요청</a> ·
+                                <a href="https://namu.wiki/NeededPages">작성이 필요한 문서</a> · 
+                                <a href="https://namu.wiki/ShortestPages">내용이 짧은 문서</a> · 
+                                <a href="https://namu.wiki/LongestPages">내용이 긴 문서</a> · 
+                                <a href="https://namu.wiki/w/%EB%B6%84%EB%A5%98:%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8">프로젝트 목록</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="wikitable">
+                    <tbody>
+                        <tr>
+                            <td class="subtitle">
+                                <img src="./img/namu_logo.png" alt="나무위키 로고">
+                                <a href="https://namu.wiki/w/%EB%B6%84%EB%A5%98:%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4%EC%9D%98%20%EA%B7%9C%EC%A0%95">나무위키의 규정</a>
+                            </td>
+                        </tr>
+                        <tr class="background">
+                            <td>
+                                <p>
+                                   <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EA%B8%B0%EB%B3%B8%EB%B0%A9%EC%B9%A8">기본방침</a> 
+                                   <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EA%B8%B0%EB%B3%B8%EB%B0%A9%EC%B9%A8/%EB%AC%B8%EC%84%9C%20%EA%B4%80%EB%A6%AC%20%EB%B0%A9%EC%B9%A8">(문서 관리 방침</a> · 
+                                   <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EA%B8%B0%EB%B3%B8%EB%B0%A9%EC%B9%A8/%ED%86%A0%EB%A1%A0%20%EA%B4%80%EB%A6%AC%20%EB%B0%A9%EC%B9%A8">토론 관리 방침</a> · 
+                                   <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EA%B8%B0%EB%B3%B8%EB%B0%A9%EC%B9%A8/%EC%9D%B4%EC%9A%A9%EC%9E%90%20%EA%B4%80%EB%A6%AC%20%EB%B0%A9%EC%B9%A8">이용자 관리 방침</a>) · 
+                                   <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%ED%8E%B8%EC%A7%91%EC%A7%80%EC%B9%A8">편집지침</a> (
+                                   <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%ED%8E%B8%EC%A7%91%EC%A7%80%EC%B9%A8/%EC%9D%BC%EB%B0%98%20%EB%AC%B8%EC%84%9C">일반 문서</a> · 
+                                   <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%ED%8E%B8%EC%A7%91%EC%A7%80%EC%B9%A8/%ED%8A%B9%EC%88%98%20%EB%AC%B8%EC%84%9C">특수 문서</a> · 
+                                   <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%ED%8E%B8%EC%A7%91%EC%A7%80%EC%B9%A8/%ED%8A%B9%EC%A0%95%20%EB%B6%84%EC%95%BC">특정 분야</a> /
+                                   <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%ED%8E%B8%EC%A7%91%EC%A7%80%EC%B9%A8/%ED%8A%B9%EC%A0%95%20%EB%B6%84%EC%95%BC/%EC%B0%BD%EC%9E%91%EB%AC%BC">창작물</a> · 
+                                   <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%ED%8E%B8%EC%A7%91%EC%A7%80%EC%B9%A8/%EB%93%B1%EC%9E%AC%20%EA%B8%B0%EC%A4%80">등재 기준</a> · 
+                                   <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%ED%8E%B8%EC%A7%91%EC%A7%80%EC%B9%A8/%ED%91%9C%EC%A0%9C%EC%96%B4">표제어</a>)
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="subtitle">
+                                <img src="./img/namu_logo.png" alt="나무위키 로고">
+                                <a href="https://namu.wiki/w/%EB%B6%84%EB%A5%98:%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4%EC%9D%98%20%EB%8F%84%EC%9B%80%EB%A7%90">나무위키의 도움말</a>
+                            </td>
+                        </tr>
+                        <tr class="background">
+                            <td>
+                                <p>
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:FAQ">FAQ</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%8F%84%EC%9B%80%EB%A7%90">도움말</a> (
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EA%B8%B0%EB%8A%A5%20%EB%8F%84%EC%9B%80%EB%A7%90">기능</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%ED%8E%B8%EC%A7%91%20%EB%8F%84%EC%9B%80%EB%A7%90">편집</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%AC%B8%EB%B2%95%20%EB%8F%84%EC%9B%80%EB%A7%90">문법</a> 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%AC%B8%EB%B2%95%20%EB%8F%84%EC%9B%80%EB%A7%90/%EC%8B%AC%ED%99%94">/심화</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%ED%86%A0%EB%A1%A0%20%EB%8F%84%EC%9B%80%EB%A7%90">토론</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EC%8A%A4%ED%82%A8%20%EB%8F%84%EC%9B%80%EB%A7%90">스킨</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EC%86%8C%EB%AA%85%20%EB%8F%84%EC%9B%80%EB%A7%90">소명</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EA%B6%8C%EB%A6%AC%EC%B9%A8%ED%95%B4%20%EB%8F%84%EC%9B%80%EB%A7%90">권리침해</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EA%B2%8C%EC%8B%9C%ED%8C%90%20%EB%8F%84%EC%9B%80%EB%A7%90">게시판</a>) · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%AC%B8%EC%84%9C%20%EC%82%AD%EC%A0%9C%EC%8B%9D%20%EC%9D%B4%EB%8F%99">문서 삭제식 이동</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%8D%94%EB%AF%B8">더미</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%8B%A4%EB%A5%B8%20%EC%9C%84%ED%82%A4%EC%99%80%EC%9D%98%20%EC%B0%A8%EC%9D%B4%EC%A0%90">다른 위키와의 차이점</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="subtitle">
+                                <img src="./img/namu_logo.png" alt="나무위키 로고">
+                                <a href="https://namu.wiki/w/%EB%B6%84%EB%A5%98:%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4%EC%9D%98%20%EC%9A%B4%EC%98%81">나무위키의 운영</a>
+                            </td>
+                        </tr>
+                        <tr class="background">
+                            <td>
+                                <p>
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EA%B4%80%EB%A6%AC%EC%9E%90">관리자</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EC%A4%91%EC%9E%AC%EC%9E%90">중재자</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EC%97%AD%EB%8C%80%20%EC%9A%B4%EC%98%81%EC%A7%84">역대 운영진</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EC%9A%B4%EC%98%81%EC%A7%84%20%EC%A7%80%EC%9B%90">운영진 지원</a> · 운영 도움말 (
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EA%B4%80%EB%A6%AC%20%EB%8F%84%EC%9B%80%EB%A7%90">관리</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EC%A4%91%EC%9E%AC%20%EB%8F%84%EC%9B%80%EB%A7%90">중재</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EC%9A%B4%EC%98%81%EC%A7%84%20%EA%B6%8C%ED%95%9C%20%EB%8F%84%EC%9B%80%EB%A7%90">권한</a>) · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EC%A0%91%EA%B7%BC%20%EC%A0%9C%ED%95%9C">접근 제한</a> (
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EC%A0%91%EA%B7%BC%20%EC%A0%9C%ED%95%9C/%EB%AC%B8%EC%84%9C%20%EB%AA%A9%EB%A1%9D">문서 목록</a>) · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EC%9A%B4%EC%98%81%ED%9A%8C%EC%9D%98">운영회의</a> (
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EC%9A%B4%EC%98%81%ED%9A%8C%EC%9D%98%20%EC%A7%84%ED%96%89%EC%97%90%20%EA%B4%80%ED%95%9C%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99">시행규칙</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EC%9A%B4%EC%98%81%ED%9A%8C%EC%9D%98/%EC%95%88%EA%B1%B4%20%EA%B1%B4%EC%9D%98">안건 건의</a>) · 임명 회의 (
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EA%B4%80%EB%A6%AC%EC%9E%90%20%EC%9E%84%EB%AA%85%20%ED%9A%8C%EC%9D%98">관리자</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EC%A4%91%EC%9E%AC%EC%9E%90%20%EC%9E%84%EB%AA%85%20%ED%9A%8C%EC%9D%98">중재자</a>) · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%8C%80%EB%AC%B8%20%EA%B8%B0%EB%85%90%EC%9D%BC">대문 기념일</a> (
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%8C%80%EB%AC%B8%20%EA%B8%B0%EB%85%90%EC%9D%BC%20%EC%9A%B4%EC%98%81%EC%97%90%20%EA%B4%80%ED%95%9C%20%EC%8B%9C%ED%96%89%EA%B7%9C%EC%B9%99">시행규칙</a>) · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EC%82%AC%EC%9A%A9%20%EC%8A%B9%EC%9D%B8%EB%90%9C%20%EB%B4%87%20%EA%B3%84%EC%A0%95%20%EB%AA%A9%EB%A1%9D">봇 리스트</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%ED%88%AC%EB%AA%85%EC%84%B1%20%EB%B3%B4%EA%B3%A0%EC%84%9C">투명성 보고서</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="subtitle">
+                                <img src="./img/namu_logo.png" alt="나무위키 로고">
+                                <a href="https://namu.wiki/w/%EB%B6%84%EB%A5%98:%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4%EC%9D%98%20%EA%B8%B0%EB%8A%A5">나무위키의 기능</a>
+                            </td>
+                        </tr>
+                        <tr class="background">
+                            <td>
+                                <p>
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%B6%84%EB%A5%98">분류</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EA%B2%8C%EC%8B%9C%ED%8C%90">게시판</a> · 
+                                    <a href="https://namu.wiki/w/the%20seed">엔진</a> (
+                                    <a href="https://namu.wiki/w/the%20seed/%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8">업데이트</a>) · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%ED%86%B5%EA%B3%84">통계</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%20%EB%8D%A4%ED%94%84">데이터베이스 덤프</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EC%97%B0%EC%8A%B5%EC%9E%A5">연습장</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%82%B4%20%EB%AC%B8%EC%84%9C%ED%95%A8">내 문서함</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%AC%B8%EC%84%9C%20%EC%9E%91%EC%84%B1%20%EC%9A%94%EC%B2%AD">문서 작성 요청</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%8B%A4%EC%A4%91%20%ED%86%A0%EB%A1%A0%20%ED%95%A9%EC%9D%98">다중 토론 합의</a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="subtitle">
+                                <img src="./img/namu_logo.png" alt="나무위키 로고">
+                                <a href="https://namu.wiki/w/%EB%B6%84%EB%A5%98:%EB%B6%84%EB%A5%98">나무위키의 분류</a>
+                            </td>
+                        </tr>
+                        <tr class="background">
+                            <td>
+                                <p>
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8">프로젝트</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EC%A3%BC%EC%9A%94%20%ED%8E%98%EC%9D%B4%EC%A7%80%20%EB%A7%81%ED%81%AC">주요 페이지 링크</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%EB%B3%B4%EC%A1%B4%EB%AC%B8%EC%84%9C">보존문서</a> · 
+                                    <a href="https://namu.wiki/w/%EB%B6%84%EB%A5%98:%ED%8C%8C%EC%9D%BC">파일</a> · 
+                                    <a href="https://namu.wiki/w/%EB%82%98%EB%AC%B4%EC%9C%84%ED%82%A4:%ED%8B%80">틀</a> · 
+                                    <a href="https://namu.wiki/w/%EB%B6%84%EB%A5%98:%ED%85%9C%ED%94%8C%EB%A6%BF">템플릿</a>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="operation">
+                    <ul>
+                        <h3><a href="https://namu.wiki/w/%ED%8B%80:%EC%9A%B4%EC%98%81%EC%95%8C%EB%A6%BC" style="font-weight: bold; color: #00a495;font-size: 1.2rem;">주요 운영 알림</a></h3><hr>
+                        <li>나무위키:편집지침/특수 문서에서 통계적 수치로 인물을 나누는 분류 금지 규정이 개정되었습니다. 해당 규정은 소급 적용됩니다. 변경 내용 보기</li><hr>
+                        <li>나무위키:편집지침/특수 문서에서 심리 유형 기준의 분류 생성 금지 규정이 개정되었습니다. 변경 내용 보기</li><hr>
+                        <li>나무위키:편집지침/특수 문서에서 아티스트들의 합작 작품 분류 생성 금지 규정이 개정되었습니다. 변경 내용 보기</li><hr>
+                        <li>나무위키:편집지침/특정 분야/창작물에서 애니메이션 프로필 표 이미지 삽입 관련 규정이 개정되었습니다. 변경 내용 보기</li><hr>
+                        <li>나무위키:편집지침/특정 분야에서 템플릿:한자 관련 규정이 개정되었습니다. 변경 내용 보기</li><hr>
+                        <li>나무위키:편집지침/일반 문서에서 날짜 서술 규정이 개정되었습니다. 변경 내용 보기</li><hr>
+                        <li>나무위키:편집지침/일반 문서에서 †(십자)' 표기 관련 규정이 개정되었습니다. 변경 내용 보기</li><hr>
+                    </ul>
+                </div>
+                <div class="operation">
+                    <ul>
+                        <h3><a href="https://namu.wiki/w/%ED%8B%80:%EC%9A%B4%EC%98%81%EC%95%8C%EB%A6%BC" style="font-weight: bold; color: #00a495;font-size: 1.2rem;">최근 운영 토론</a></h3><hr>
+                        <li>나무위키:편집지침/일반 문서에서 문제가 되는 서술에 "이해관계가 얽힌 서술" 추가에 관한 토론이 진행 중입니다.</li><hr>
+                        <li>나무위키:편집지침/특수 문서에서 순환성 분류 생성 금지 규정 신설에 관한 토론이 진행 중입니다.</li><hr>
+                    </ul>
+                </div>
+                
+                <hr>
+                <div class="copyright">
+                    <img src="./img/cc.png" alt="cc">
+                    <p>
+                        이 저작물은 CC BY-NC-SA 2.0 KR에 따라 이용할 수 있습니다. (단, 라이선스가 명시된 일부 문서 및 삽화 제외)<br>
+                        기여하신 문서의 저작권은 각 기여자에게 있으며, 각 기여자는 기여하신 부분의 저작권을 갖습니다.<br>
+                        <br>
+                        나무위키는 백과사전이 아니며 검증되지 않았거나, 편향적이거나, 잘못된 서술이 있을 수 있습니다.<br>
+                        나무위키는 위키위키입니다. 여러분이 직접 문서를 고칠 수 있으며, 다른 사람의 의견을 원할 경우 직접 토론을 발제할 수 있습니다.<br>
+                    </p>
+                </div>
+                <div class="footer"></div>
+                    
+            </div>
+
+        </article>
+        <aside class="asideright">
+
+        </aside>
+    </section>
+
+</body>
+</html>
