@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+div.top{
+    border-top: 7px darkblue solid;
+    text-align: center;
+    height: 100px;
+}
+div.top img{
+    width: 200px;
+    height: 90px;
+
+}
+div.login{
+    padding-top: 80px;
+    width: 1440px;
+    height: 500px;
+    text-align: center;
+    line-height: 20px;
+    font-family: 'Nanum Gothic', sans-serif;
+    
+
+}
+div.login input{
+    width: 400px;
+    height: 40px;
+    
+}
+div.login input[id="login"]{
+    width: 400px;
+    height: 60px;
+    background-color: rgb(56, 115, 204);
+    font-size: 13pt;
+    font-weight: bold;
+    color: white;
+    border: none;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+div.login a{
+    text-decoration: none;
+    color:rgb(56, 115, 204);
+    font-size: 11pt;
+    font-weight: bold;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+div.login p{
+    color: grey;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 11pt;
+}
+div.login p a{
+    font-size: 11pt;
+    color:rgb(56, 115, 204);
+    font-family: 'Nanum Gothic', sans-serif;
+}
+div.last{
+    padding-top: 40px;
+    text-align: center;
+}
+div.last a{
+    text-decoration: none;
+    color:rgb(56, 115, 204);
+    font-size: 11pt;
+    font-weight: bold;
+    font-family: 'Nanum Gothic', sans-serif;    
+}
+div.last p{
+    color: grey;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 9pt;
+}
