@@ -1,0 +1,22 @@
+*{
+    margin: 0 auto;
+}
+header, footer{
+    background-color: darkblue;
+    color: white;
+}
+nav{
+    background-color: teal;
+    color: white;
+}
+nav ul{
+    list-style: none;
+    text-align: left;
+}
+section{
+    background-color: gainsboro;
+}
+li{
+    display: inline;
+    text-transform: uppercase;
+}

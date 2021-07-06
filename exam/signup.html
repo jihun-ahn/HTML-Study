@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 가입</title>
+    <link rel="stylesheet" href="./css/css.css">
+</head>
+<body>
+    <div class="main">
+        <h1>회원가입</h1>
+        <form action="" id="signup">
+            <fieldset>
+                <legend>필수 입력 사항</legend>
+                <table class="signup">
+                    <tr>
+                        <td>
+                            <span>아이디 *</span><br>
+                            <input type="text" name="id" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>비밀번호 *</span><br>
+                            <input type="password" name="pwd" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>비밀번호 확인 *</span><br>
+                            <input type="password" name="cPwd" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>이름 *</span><br>
+                            <input type="text" name="name" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>이메일 *</span><br>
+                            <input type="email" name="email" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>전화번호 *</span><br>
+                            <input type="tel" name="phone" required>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>부가 입력사항</legend>
+                <table class="signup">
+                    <tr>
+                        <td>
+                            <span>나이</span><br>
+                            <input type="number" name="age">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>성별</span><br>
+                            <input type="radio" name="gender" value="male">남성 <input type="radio" name="gender" value="famale">여성
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>취미</span><br>
+                            <input type="radio" name="hobby" value="1">영화
+                            <input type="radio" name="hobby" value="2">음악
+                            <input type="radio" name="hobby" value="3">독서<br>
+                            <input type="radio" name="hobby" value="4">게임
+                            <input type="radio" name="hobby" value="5">운동
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>직업</span><br>
+                            <select name="job">
+                                <option value="1">학생</option>
+                                <option value="2">선생</option>
+                                <option value="3">경찰</option>
+                                <option value="4">의사</option>
+                                <option value="5">사업가</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>자기소개</span><br>
+                            <textarea name="content" cols="30" rows="10"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <div class="button">
+                <input type="button" value="회원가입" class="btn center" onclick="location.href='index.html'">
+                <input type="reset" value="다시작성">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
