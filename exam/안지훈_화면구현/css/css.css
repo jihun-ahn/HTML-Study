@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+*{
+    margin: 0 auto;
+    text-align: center;
+    color: rgb(208, 255, 215);
+    font-family: 'Poor Story', cursive;
+}
+*:not(html):not(body){
+    padding: 5px;
+}
+*:not(h1){
+    font-size: 22px;
+}
+html{
+    background-color: mediumaquamarine;
+    
+}
+body{
+    width: 800px;
+    height: 600px;
+}
+.main{
+    border: 1px solid teal;
+    width: 80%;
+    margin-top: 10%;
+    background-color: rgb(63, 197, 152);
+    border-radius: 5px;
+}
+h1{
+    color: rgb(16, 88, 85);
+}
+table{
+    border-collapse: collapse;
+    border-color: teal;
+}
+ul{
+    list-style-type: none;
+}
+#signup{
+    display: flex;
+    flex-wrap: wrap;
+}
+fieldset{
+    border: 1px solid teal;
+    border-radius: 5px;
+    width: 40%;
+}
+fieldset table, fieldset tr, fieldset td, fieldset label{
+    width: 80%;
+}
+legend *{
+    color: rgb(1, 87, 58);
+}
+label{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+    color: rgb(224, 255, 229);
+}
+a:hover{
+    text-decoration: underline;
+    color: rgb(156, 253, 173);
+}
+input, textarea, select, option{
+    border: 0;
+    background-color: rgb(221, 253, 224);
+    border-radius: 3px;
+    color: rgb(46, 128, 56);
+    text-align: left;
+}
+.button>*{
+    background-color: rgb(204, 255, 207);
+    color: rgb(46, 128, 56);
+    border-radius: 3px;
+}
+.button>*:hover{
+    background-color: rgba(204, 255, 207, 0.87);
+    color: rgba(60, 170, 73, 0.877);
+}
